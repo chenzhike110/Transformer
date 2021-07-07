@@ -22,7 +22,7 @@ class Encoder(nn.Module):
         Number of heads
     """
 
-    def __init__(self, d_model:int, q:int, v:int, h:int, dropout:Optional(float) = 0.3):
+    def __init__(self, d_model:int, q:int, v:int, h:int, dropout:Optional[float] = 0.3):
         super().__init__()
 
         self._selfAttention = MultiHeadAttention(d_model, q, v,h)
